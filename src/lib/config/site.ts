@@ -2,13 +2,13 @@ import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
   protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://',
-  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'urara-demo.netlify.app',
+  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'data.csaladen.es/',
   title: 'Romanian Economic Monitor',
   subtitle: 'Overview of the Romanian economy: facts and forecasts',
   lang: 'en-US',
   description: 'Powered by SvelteKit/Urara',
   author: {
-    avatar: '/assets/logo/purple-globe.png',
+    avatar: '/assets/logo/fsega_en.png',
     name: 'Romanian Economic Monitor',
     status: '',
     bio: 'Overview of the Romanian economy: facts and forecasts'
@@ -32,7 +32,7 @@ export const site: SiteConfig = {
     },
     "explorables": {
       "name": "Explorables",
-      "description": "",
+      "description": "This is a very long category description that spans over two lines",
       "img": "/assets/logo/v.png"
     },
     "about": {

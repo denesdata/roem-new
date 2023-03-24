@@ -18,8 +18,8 @@ export default defineConfig({
     adapter: Object.keys(process.env).some(key => key === 'VERCEL')
       ? adapterVercel()
       : Object.keys(process.env).some(key => key === 'NETLIFY')
-      ? adapterNetlify({ edge: true })
-      : adapterStatic({
+        ? adapterNetlify({ edge: true })
+        : adapterStatic({
           pages: 'build',
           assets: 'build',
           fallback: undefined

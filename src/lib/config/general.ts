@@ -18,6 +18,9 @@ export const theme: ThemeConfig = [
 export const head: HeadConfig = {}
 
 export const header: HeaderConfig = {
+  search: {
+    provider: 'google'
+  },
   nav: [
     {
       text: 'Highlights',
@@ -38,6 +41,10 @@ export const header: HeaderConfig = {
     {
       text: 'About',
       children: [
+        {
+          text: 'Project',
+          link: '/about/project'
+        },
         {
           text: 'Team',
           link: '/about/team'

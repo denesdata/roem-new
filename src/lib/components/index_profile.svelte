@@ -3,14 +3,11 @@
 </script>
 
 <div
-  class="h-card flex flex-col gap-4 sticky top-24 card card-body p-4 items-right xl:border-2 xl:py-8 border-base-content/10 xl:ml-auto xl:mr-8 xl:max-w-xs">
+  class="h-card flex flex-col gap-4 top-8 card card-body p-4 items-right xl:border-2 xl:py-8 border-base-content/10 xl:ml-auto xl:mr-8 xl:max-w-xs">
   <a href={site.protocol + site.domain} class="hidden u-url u-uid">{site.author.name}</a>
   <figure class="relative mx-auto group">
     {#if site.author.avatar}
-      <img
-        class="u-photo rounded-full transition-shadow z-10 w-24 h-24 md:w-32 md:h-32"
-        src={site.author.avatar}
-        alt={site.author.name} />
+      <img class="u-photo transition-shadow z-10 w-5/6" src={site.author.avatar} alt={site.author.name} />
     {/if}
     {#if site.author.status}
       <div

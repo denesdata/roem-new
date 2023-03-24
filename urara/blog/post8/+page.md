@@ -1,8 +1,6 @@
 ---
-title: 'Post1'
+title: 'Post8'
 created: 2021-12-01
-tags: 
-  - one
 ---
 
 Poast1

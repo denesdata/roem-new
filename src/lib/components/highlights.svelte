@@ -8,7 +8,8 @@
   import Head from '$lib/components/head.svelte'
   import Footer from '$lib/components/footer.svelte'
   import Post from '$lib/components/post_card.svelte'
-  import Profile from '$lib/components/index_profile.svelte'
+  import Category from '$lib/components/category.svelte'
+  import MiniDash from '$lib/components/minidash.svelte'
 
   let allPosts: Urara.Post[]
   let allTags: string[]
@@ -17,14 +18,34 @@
 
   storedTitle.set('')
 
-  $: storedPosts.subscribe(storedPosts => (allPosts = storedPosts.filter(post => !post.flags?.includes('unlisted'))))
+  $: storedPosts.subscribe(
+    storedPosts =>
+      (allPosts = storedPosts
+        .filter(post => !post.flags?.includes('unlisted'))
+        .filter(post => post.slug.slice(1).split('/')[0] != 'about'))
+  )
 
-  $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
+  // $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
+  $: storedTags.subscribe(
+    storedTags =>
+      (allTags = Array.from(
+        new Set(
+          allPosts
+            .filter(post => post.tags)
+            .map(post => post.tags)
+            .flat()
+        )
+      ) as string[])
+  )
 
   $: if (posts.length > 1) years = [new Date(posts[0].published ?? posts[0].created).getFullYear()]
 
   $: if (tags) {
-    posts = !tags ? allPosts : allPosts.filter(post => tags.every(tag => post.tags?.includes(tag)))
+    posts = !tags
+      ? allPosts
+      : allPosts
+          .filter(post => post.slug.slice(1).split('/')[0] != 'about')
+          .filter(post => tags.every(tag => post.tags?.includes(tag)))
     if (browser && window.location.pathname === '/')
       window.history.replaceState({}, '', tags.length > 0 ? `?tags=${tags.toString()}` : `/`)
   }
@@ -44,7 +65,8 @@
     in:fly={{ x: 25, duration: 300, delay: 500 }}
     out:fly={{ x: 25, duration: 300 }}
     class="flex-1 w-full max-w-screen-md order-first mx-auto xl:mr-0 xl:ml-8 xl:max-w-md">
-    <Profile />
+    <Category />
+    <MiniDash />
   </div>
   <div
     in:fly={{ x: -25, duration: 300, delay: 500 }}
@@ -66,7 +88,7 @@
       </div>
     {/if}
   </div>
-  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0">
+  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0 mt-8">
     {#key posts}
       <!-- {:else} is not used because there is a problem with the transition -->
       {#if loaded && posts.length === 0}

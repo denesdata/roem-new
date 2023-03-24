@@ -8,6 +8,8 @@
   import Head from '$lib/components/head_static.svelte'
   import Header from '$lib/components/header.svelte'
   import Transition from '$lib/components/transition.svelte'
+  import Highlights from '$lib/components/highlights.svelte'
+  import Blog from '$lib/components/blog.svelte'
   import 'uno.css'
   import '../app.pcss'
   import PostCard from '$lib/components/post_card.svelte'
@@ -37,5 +39,12 @@
 <Header {path} />
 
 <Transition {path}>
-  <slot />
+  {#if path.split('/')[1] == 'blog'}
+    <Blog />
+  {:else if path.split('/')[1] == 'highlights'}
+    <Highlights />
+  {:else}
+    <!-- {path.split('/')[1]} -->
+    <slot />
+  {/if}
 </Transition>

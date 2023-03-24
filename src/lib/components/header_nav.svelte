@@ -5,6 +5,8 @@
   export let title: string
   export let scrollY: number
   export let pin: boolean
+  import { page } from '$app/stores'
+  let category = $page.url.toString().split('/')[3]
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -47,6 +49,9 @@
     on:click={() => window.scrollTo(0, 0)}
     class:hidden={scrollY < 32 || !title}
     class="swap-on btn btn-ghost text-base font-normal normal-case transition-all duration-200">
+    {#if category}
+      <img src={site.category[category].img} alt={category} class="u-photo mr-3 z-10 w-14 h-7 md:w-7 md:h-7" />
+    {/if}
     {title}
   </button>
   <ul class:hidden={scrollY > 64 && title} class="swap-off menu menu-horizontal p-0">

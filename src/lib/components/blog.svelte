@@ -25,7 +25,18 @@
         .filter(post => post.slug.slice(1).split('/')[0] == $page.url.toString().split('/')[3]))
   )
 
-  $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
+  // $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
+  $: storedTags.subscribe(
+    storedTags =>
+      (allTags = Array.from(
+        new Set(
+          allPosts
+            .filter(post => post.tags)
+            .map(post => post.tags)
+            .flat()
+        )
+      ) as string[])
+  )
 
   $: if (posts.length > 1) years = [new Date(posts[0].published ?? posts[0].created).getFullYear()]
 
@@ -77,7 +88,7 @@
       </div>
     {/if}
   </div>
-  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0">
+  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0 mt-8">
     {#key posts}
       <!-- {:else} is not used because there is a problem with the transition -->
       {#if loaded && posts.length === 0}

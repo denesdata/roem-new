@@ -63,11 +63,11 @@
           <Nav {path} {title} {pin} {scrollY} nav={headerConfig.nav} />
         {/if}
         <a href="/" class="btn btn-ghost normal-case text-lg gap-3">
-          <img src="/favicon.png" alt="logo" class="u-photo z-10 w-24 h-8 md:w-8 md:h-8" />
+          <img src="/favicon.png" alt="logo" class="u-photo z-10 w-8 h-8" />
           {site.title}
         </a>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end mr-8">
         {#if headerConfig.search}
           <button aria-label="search" on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost">
             <span class="i-heroicons-outline-search" />
@@ -112,7 +112,7 @@
   {:else}
     <div in:fly={{ x: 50, duration: 300, delay: 300 }} out:fly={{ x: 50, duration: 300 }} class="navbar">
       <Search />
-      <button on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost">
+      <button on:click={() => (search = !search)} tabindex="0" class="btn btn-square btn-ghost mr-8">
         <span class="i-heroicons-outline-x" />
       </button>
     </div>

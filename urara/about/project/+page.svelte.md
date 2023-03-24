@@ -1,14 +1,12 @@
 ---
-title: 'Hello World'
-image: '/hello-world/urara.webp'
+title: 'Project'
 created: 2021-11-01
 updated: 2021-12-12
 tags:
-  - 'Hello World'
-  - 'Urara'
+  - 'project'
 ---
 
-Welcome to Urara! this article contains some basic operations to help you quickly get started.
+Modelling 
 
 ## Developing
 
@@ -36,9 +34,3 @@ Create a production version of ur blog:
 ```bash
 pnpm build
 ```
-
-u can preview the built app with `pnpm preview`.
-
-## Documentation
-
-For full documentation, visit [urara-docs.netlify.app](https://urara-docs.netlify.app).
