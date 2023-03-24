@@ -7,72 +7,102 @@
     xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
     xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
     <url>
-      <loc>https://urara-demo.netlify.app</loc>
+      <loc>https://data.csaladen.es/</loc>
     </url>
     
         <url>
-            <loc>https://urara-demo.netlify.app/explorables</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
+            <loc>https://data.csaladen.es//explorables</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/hello-world/elements</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
+            <loc>https://data.csaladen.es//blog/post2</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/hello-world/toc-disabled</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
+            <loc>https://data.csaladen.es//blog</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/blog/post2</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
+            <loc>https://data.csaladen.es//blog/pos4</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/blog/post1</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
+            <loc>https://data.csaladen.es//blog/post1</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/about/team</loc>
-            <lastmod>2023-03-21T11:51:52.998Z</lastmod>
+            <loc>https://data.csaladen.es//blog/post3</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/about/prizes</loc>
-            <lastmod>2023-03-21T11:51:52.998Z</lastmod>
+            <loc>https://data.csaladen.es//blog/post5</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/about/data</loc>
-            <lastmod>2023-03-21T11:51:52.998Z</lastmod>
+            <loc>https://data.csaladen.es//blog/post6</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/about/careers</loc>
-            <lastmod>2023-03-21T11:51:52.998Z</lastmod>
+            <loc>https://data.csaladen.es//blog/post7</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/hello-world</loc>
+            <loc>https://data.csaladen.es//blog/post8</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//blog/post9</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//highlights</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//about/team</loc>
+            <lastmod>2023-03-24T05:25:20.429Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//about/prizes</loc>
+            <lastmod>2023-03-24T05:25:20.429Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//about/data</loc>
+            <lastmod>2023-03-24T05:25:20.429Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//about/careers</loc>
+            <lastmod>2023-03-24T05:25:20.429Z</lastmod>
+            <priority>0.5</priority>
+        </url>
+        <url>
+            <loc>https://data.csaladen.es//about/project</loc>
             <lastmod>2021-12-12T00:00:00.000Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/highlights</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
+            <loc>https://data.csaladen.es//modelling</loc>
+            <lastmod>2023-03-24T05:25:20.437Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/modelling</loc>
-            <lastmod>2023-03-21T11:51:53.002Z</lastmod>
-            <priority>0.5</priority>
-        </url>
-        <url>
-            <loc>https://urara-demo.netlify.app/about/publications</loc>
-            <lastmod>2023-03-21T11:51:52.998Z</lastmod>
+            <loc>https://data.csaladen.es//about/publications</loc>
+            <lastmod>2023-03-24T05:25:20.429Z</lastmod>
             <priority>0.5</priority>
         </url>
   </urlset>
