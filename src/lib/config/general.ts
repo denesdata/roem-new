@@ -80,7 +80,8 @@ export const footer: FooterConfig = {
       text: 'Sitemap',
       link: '/sitemap.xml'
     }
-  ]
+  ],
+  img: '/assets/logo/logo_UBB_en.png'
 }
 
 export const date: DateConfig = {

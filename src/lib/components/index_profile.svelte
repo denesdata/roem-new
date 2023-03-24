@@ -7,7 +7,10 @@
   <a href={site.protocol + site.domain} class="hidden u-url u-uid">{site.author.name}</a>
   <figure class="relative mx-auto group">
     {#if site.author.avatar}
-      <img class="u-photo transition-shadow z-10 w-5/6" src={site.author.avatar} alt={site.author.name} />
+      <img
+        class="u-photo transition-shadow z-10 w-5/6 grayscale-20 brightness-0 invert opacity-80"
+        src={site.author.avatar}
+        alt={site.author.name} />
     {/if}
     {#if site.author.status}
       <div

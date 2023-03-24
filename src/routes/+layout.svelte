@@ -39,9 +39,9 @@
 <Header {path} />
 
 <Transition {path}>
-  {#if path.split('/')[1] == 'blog'}
+  {#if path == '/blog'}
     <Blog />
-  {:else if path.split('/')[1] == 'highlights'}
+  {:else if path == '/highlights'}
     <Highlights />
   {:else}
     <!-- {path.split('/')[1]} -->

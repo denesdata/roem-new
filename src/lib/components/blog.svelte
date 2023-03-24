@@ -25,7 +25,7 @@
         .filter(post => post.slug.slice(1).split('/')[0] == $page.url.toString().split('/')[3]))
   )
 
-  // $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
+  $: storedTags.subscribe(storedTags => (allTags = storedTags as string[]))
   $: storedTags.subscribe(
     storedTags =>
       (allTags = Array.from(

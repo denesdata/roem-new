@@ -50,7 +50,7 @@
     class:hidden={scrollY < 32 || !title}
     class="swap-on btn btn-ghost text-base font-normal normal-case transition-all duration-200">
     {#if category}
-      <img src={site.category[category].img} alt={category} class="u-photo mr-3 z-10 w-14 h-7 md:w-7 md:h-7" />
+      <img src={site.category[category].img} alt={category} class="u-photo mr-3 z-10 w-7 h-7" />
     {/if}
     {title}
   </button>
@@ -59,7 +59,7 @@
       {#if link && !children}
         <li>
           <a class="!rounded-btn" class:font-bold={link === path} href={link}>
-            <img src={site.category[link.slice(1)].img} alt={link.slice(1)} class="u-photo z-10 w-14 h-7 md:w-7 md:h-7" />
+            <img src={site.category[link.slice(1)].img} alt={link.slice(1)} class="u-photo z-10 w-7 h-7" />
             {text}
           </a>
         </li>

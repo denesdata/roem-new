@@ -30,6 +30,7 @@ export type FooterConfig = {
   }[]
   html?: string
   since?: string
+  img: string
 }
 
 export type DateConfig = { locales: string; options: Intl.DateTimeFormatOptions }
