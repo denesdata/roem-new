@@ -70,7 +70,8 @@
       preview && post.type === 'article' && post.image ? 'md:col-start-1 md:row-start-1 md:text-neutral-content md:z-20' : ''
     }`}>
     <div class="flex flex-col gap-2">
-      {#if post.image && !preview}
+      <!-- Turn off the automatic header image for now -->
+      <!-- {#if post.image && !preview}
         <figure
           class={`md:order-last rounded-box shadow-xl mb-4 ${
             post.type === 'article' ? 'flex-col gap-2 -mx-4 -mt-8 md:mt-0' : 'flex-col -mx-8'
@@ -82,7 +83,7 @@
             {loading}
             {decoding} />
         </figure>
-      {/if}
+      {/if} -->
       <Status {post} {preview} />
       {#if post.title}
         {#if preview}
@@ -124,7 +125,7 @@
       <Pagination {next} {prev} />
     {/if}
     {#if browser && postConfig.comment && !post.flags?.includes('comment-disabled')}
-      <Comment {post} config={postConfig.comment} />
+      <eComment {post} config={postConfig.comment} />
     {/if}
   {/if}
 </svelte:element>
