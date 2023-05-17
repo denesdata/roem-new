@@ -10,6 +10,7 @@
   import Transition from '$lib/components/transition.svelte'
   import Highlights from '$lib/components/highlights.svelte'
   import Blog from '$lib/components/blog.svelte'
+  import Dashboard from '$lib/components/dashboard.svelte'
   import 'uno.css'
   import '../app.pcss'
   import PostCard from '$lib/components/post_card.svelte'
@@ -43,6 +44,8 @@
     <Blog />
   {:else if path == '/highlights'}
     <Highlights />
+  {:else if path == '/dashboard'}
+    <Dashboard />
   {:else}
     <!-- {path.split('/')[1]} -->
     <slot />

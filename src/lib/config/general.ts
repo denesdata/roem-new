@@ -39,6 +39,10 @@ export const header: HeaderConfig = {
       link: '/explorables'
     },
     {
+      text: 'Dashboard',
+      link: '/dashboard'
+    },
+    {
       text: 'About',
       children: [
         {

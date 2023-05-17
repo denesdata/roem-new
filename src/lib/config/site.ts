@@ -35,6 +35,11 @@ export const site: SiteConfig = {
       "description": "This is a very long category description that spans over two lines",
       "img": "/assets/logo/v.png"
     },
+    "dashboard": {
+      "name": "Dashboard",
+      "description": "Existing dashboard",
+      "img": "/assets/logo/c.png"
+    },
     "about": {
       "name": "About",
       "description": "",
