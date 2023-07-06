@@ -39,10 +39,10 @@
         Math.round((scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 10000) / 100
   }
 
-  if (browser)
-    currentTheme =
-      localStorage.getItem('theme') ??
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? theme?.[1].name : theme[0].name ?? theme[0].name)
+  // if (browser)
+  //   currentTheme =
+  //     localStorage.getItem('theme') ??
+  //     (window.matchMedia('(prefers-color-scheme: dark)').matches ? theme?.[1].name : theme[0].name ?? theme[0].name)
 </script>
 
 <svelte:head>
@@ -54,17 +54,17 @@
 <header
   id="header"
   class:-translate-y-32={!pin && scrollY > 0}
-  class="fixed z-50 w-screen transition-all duration-500 ease-in-out border-b-2 border-transparent max-h-[4.125rem] {scrollY >
-    32 && 'backdrop-blur border-base-content/10 bg-base-100/30 md:bg-base-200/30'}">
+  class="fixed z-50 w-screen transition-all duration-500 ease-in-out border-b-2 border-transparent max-h-[6.5rem] bg-pfp-navy text-white tracking-menu pb-5 pt-5 {scrollY >
+    32 && 'backdrop-blur border-base-content/10 bg-pfp-navy-100/30 md:bg-pfp-navy/30 text-pfp-navy'}">
   {#if !search}
-    <div in:fly={{ x: -50, duration: 300, delay: 300 }} out:fly={{ x: -50, duration: 300 }} class="navbar">
+    <div in:fly={{ x: -50, duration: 300, delay: 300 }} out:fly={{ x: -50, duration: 300 }} class="navbar pl-16">
       <div class="navbar-start">
         {#if headerConfig.nav}
           <Nav {path} {title} {pin} {scrollY} nav={headerConfig.nav} />
         {/if}
         <a href="/" class="btn btn-ghost normal-case text-lg gap-3">
-          <img src="/favicon.png" alt="logo" class="u-photo z-10 w-8 h-8" />
-          {site.title}
+          <img src="/assets/pfp.png" alt="logo" class="u-photo z-14 h-14" />
+          <!-- {site.title} -->
         </a>
       </div>
       <div class="navbar-end mr-8">

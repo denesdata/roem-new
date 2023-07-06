@@ -13,31 +13,25 @@
 
 <Head {post} />
 
-<div class="flex flex-col flex-nowrap justify-center xl:flex-row xl:flex-wrap">
-  <div
-    in:fly={{ x: 25, duration: 300, delay: 500 }}
-    out:fly={{ x: 25, duration: 300 }}
-    class="flex-1 w-full max-w-screen-md order-first ease-out transform mx-auto xl:mr-0">
-    {#if browser}
-      <Category />
-      <MiniDash />
-      <!-- <Action {post} /> -->
-    {/if}
-  </div>
-  <div
-    in:fly={{ x: -25, duration: 300, delay: 500 }}
-    out:fly={{ x: -25, duration: 300 }}
-    class="flex-1 w-full max-w-screen-md xl:order-last ease-out transform mx-auto xl:mr-0">
-    {#if browser && post.toc}
-      <div class="h-full hidden xl:block">
-        <Toc toc={post.toc} />
+<div class="flex justify-center ml-auto">
+  <div class="flex justify-left ml-auto w-5/6">
+    <div class="flex flex-col flex-nowrap justify-center xl:flex-row xl:flex-wrap">
+      <div
+        in:fly={{ x: -25, duration: 300, delay: 500 }}
+        out:fly={{ x: -25, duration: 300 }}
+        class="flex-1 min-w-1/8 max-w-screen-md xl:order-last ease-out transform mx-auto xl:mr-0">
+        {#if browser && post.toc}
+          <div class="h-full hidden xl:block">
+            <Toc toc={post.toc} />
+          </div>
+        {/if}
       </div>
-    {/if}
-  </div>
-  <div class="flex-none w-full max-w-screen-md mx-auto xl:mx-0 mt-8">
-    <Card {post}>
-      <slot />
-    </Card>
-    <Footer sticky={true} />
+      <div class="flex-none min-w-7/8 max-w-screen-md mx-auto xl:mx-0 p-4 pt-20">
+        <Card {post}>
+          <slot />
+        </Card>
+        <Footer sticky={true} />
+      </div>
+    </div>
   </div>
 </div>

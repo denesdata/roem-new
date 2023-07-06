@@ -46,12 +46,12 @@
     )
 </script>
 
-<aside class="sticky top-16 py-8">
+<aside class="sticky top-32 py-8">
   <nav
     id="post-toc"
     aria-label="TableOfContent"
     dir="rtl"
-    class="max-h-[calc(100vh-12rem)] overflow-y-hidden hover:overflow-y-auto">
+    class="max-h-[calc(100vh-8rem)] overflow-y-hidden hover:overflow-y-auto">
     <ul dir="ltr" id="toc-list-root">
       {#each toc as { depth, title, slug }}
         <li id={`toc-item-${slug}`} class="flex flex-col">

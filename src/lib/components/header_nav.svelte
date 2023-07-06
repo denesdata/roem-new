@@ -44,13 +44,13 @@
     {/each}
   </ul>
 </div>
-<div class:swap-active={scrollY > 32 && title} class="swap order-last hidden lg:inline-grid">
+<div class:swap-active={scrollY > 32 && title} class="pl-16 swap order-last hidden lg:inline-grid">
   <button
     on:click={() => window.scrollTo(0, 0)}
     class:hidden={scrollY < 32 || !title}
     class="swap-on btn btn-ghost text-base font-normal normal-case transition-all duration-200">
     {#if category}
-      <img src={site.category[category].img} alt={category} class="u-photo mr-3 z-10 w-7 h-7" />
+      <!-- <img src={site.category[category].img} alt={category} class="u-photo mr-3 z-10 w-7 h-7" /> -->
     {/if}
     {title}
   </button>
@@ -58,18 +58,21 @@
     {#each nav as { text, link, children }}
       {#if link && !children}
         <li>
-          <a class="!rounded-btn" class:font-bold={link === path} href={link}>
-            <img src={site.category[link.slice(1)].img} alt={link.slice(1)} class="u-photo z-10 w-7 h-7" />
+          <a class="!rounded-btn" class:font-bold={link === path} class:text-pfp-green={link === path} href={link}>
+            <!-- <img src={site.category[link.slice(1)].img} alt={link.slice(1)} class="u-photo z-10 w-7 h-7" /> -->
             {text}
           </a>
         </li>
       {:else if children}
         <li>
-          <span class:font-bold={children.some(({ link }) => link === path)} class="!rounded-btn gap-3">
-            <img
+          <span
+            class:font-bold={children.some(({ link }) => link === path)}
+            class:text-pfp-green={children.some(({ link }) => link === path)}
+            class="!rounded-btn gap-3">
+            <!-- <img
               src={site.category[text.toLowerCase()].img}
               alt={text.toLowerCase()}
-              class="u-photo z-10 w-16 h-8 md:w-8 md:h-8" />
+              class="u-photo z-10 w-16 h-8 md:w-8 md:h-8" /> -->
             {text}
             <span class="i-heroicons-solid-chevron-down -mr-1" />
           </span>
@@ -77,7 +80,7 @@
           <ul tabindex="0" class="menu rounded-box bg-base-100 text-base-content shadow-lg p-2">
             {#each children as { text, link }}
               <li>
-                <a class:font-bold={link === path} href={link}>{text}</a>
+                <a class:font-bold={link === path} class:text-pfp-green={link === path} href={link}>{text}</a>
               </li>
             {/each}
           </ul>

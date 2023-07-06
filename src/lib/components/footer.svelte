@@ -9,17 +9,17 @@
 
 <footer
   id="footer"
-  class="footer footer-center bg-base-300 text-base-content shadow-inner p-8 {rounded
-    ? 'rounded-box'
-    : 'md:rounded-box'} {sticky ? 'sticky bottom-0 z-0 md:static' : ''} {className ?? ''}">
+  class="footer footer-center bg-pfp-navy text-white shadow-inner p-8 {rounded ? 'rounded-box' : 'md:rounded-box'} {sticky
+    ? 'sticky bottom-0 z-0 md:static'
+    : ''} {className ?? ''}">
   {#if footerConfig.img}
-    <img class="u-photo transition-shadow z-10 h-20 filter grayscale invert" src={footerConfig.img} alt={site.title} />
+    <img class="u-photo transition-shadow z-10 h-20" src={footerConfig.img} alt={site.title} />
   {/if}
-  <div class="prose">
+  <div class="prose text-white">
     <p>
       {#if footerConfig.nav}
         {#each footerConfig.nav as { text, link }, i}
-          <a href={link} rel="noopener noreferrer external" target="_blank">{text}</a>
+          <a href={link} class="text-white" rel="noopener noreferrer external" target="_blank">{text}</a>
           {#if i + 1 < footerConfig.nav.length}
             <span class="mr-1">·</span>
           {/if}
@@ -30,16 +30,16 @@
         ? `${footerConfig.since} - ${new Date().toJSON().substring(0, 4)}`
         : new Date().toJSON().substring(0, 4)}
       {site.author.name}
-      <br />
+      <!-- <br />
       Powered by
       <a
         rel="noopener noreferrer external"
         target="_blank"
-        class="tooltip tooltip-secondary hover:text-secondary"
+        class="tooltip tooltip-secondary hover:text-secondary text-white"
         data-tip="🌸 [δ] - Based on MDsveX & SvelteKit 🌸"
         href="https://github.com/importantimport/urara">
         Urara
-      </a>
+      </a> -->
       {#if footerConfig.html}
         <br />
         {@html footerConfig.html}

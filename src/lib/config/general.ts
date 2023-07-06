@@ -2,14 +2,6 @@ import type { ThemeConfig, HeadConfig, HeaderConfig, FooterConfig, DateConfig, F
 
 export const theme: ThemeConfig = [
   {
-    name: 'dracula',
-    text: '🟦 Default'
-  },
-  {
-    name: 'night',
-    text: '⚫ Dark'
-  },
-  {
     name: 'winter',
     text: '⚪ Light'
   }
@@ -23,53 +15,87 @@ export const header: HeaderConfig = {
   },
   nav: [
     {
-      text: 'Highlights',
-      link: '/highlights'
+      text: 'Home',
+      link: '/'
     },
     {
-      text: 'Blog',
-      link: '/blog'
+      text: 'Explore',
+      link: '/explore'
     },
     {
-      text: 'Modelling & Analyis',
-      link: '/modelling'
-    },
-    {
-      text: 'Explorables',
-      link: '/explorables'
-    },
-    {
-      text: 'Dashboard',
-      link: '/dashboard'
-    },
-    {
-      text: 'About',
+      text: 'About us',
       children: [
         {
-          text: 'Project',
-          link: '/about/project'
+          text: 'Our purpose & mission',
+          link: '/about/mission'
         },
         {
-          text: 'Team',
+          text: 'Meet the team',
           link: '/about/team'
         },
         {
-          text: 'Prizes',
-          link: '/about/prizes'
+          text: 'Collaboration Partners',
+          link: '/about/partners'
         },
         {
-          text: 'Data',
-          link: '/about/data'
-        },
-        {
-          text: 'Publications',
-          link: '/about/publications'
-        },
-        {
-          text: 'Careers',
-          link: '/about/careers'
+          text: 'Customer Testimonials',
+          link: '/about/testimonials'
         }
       ]
+    },
+    {
+      text: 'Green energy',
+      children: [
+        {
+          text: 'Investing in green energy',
+          link: '/green-energy/investing'
+        },
+        {
+          text: 'Power from non-recycled waste | The New Renewable',
+          link: '/green-energy/new-renewable'
+        },
+        {
+          text: 'Solar',
+          link: '/green-energy/solar'
+        },
+        {
+          text: 'Wind',
+          link: '/green-energy/wind'
+        },
+        {
+          text: 'Energy Storage',
+          link: '/green-energy/energy-storage'
+        }
+      ]
+    },
+    {
+      text: 'Resources',
+      children: [
+        {
+          text: 'Financial options',
+          link: '/resources/financial-options'
+        },
+        {
+          text: 'Research Articles',
+          link: '/resources/articles'
+        },
+        {
+          text: 'Case studies',
+          link: '/resources/case-studies'
+        },
+        {
+          text: 'Policy Landscape',
+          link: '/resources/policy'
+        }
+      ]
+    },
+    {
+      text: 'News',
+      link: '/news'
+    },
+    {
+      text: 'Contact Us',
+      link: '/contact'
     }
   ]
 }
@@ -85,7 +111,7 @@ export const footer: FooterConfig = {
       link: '/sitemap.xml'
     }
   ],
-  img: '/assets/logo/logo_UBB_en.png'
+  img: '/assets/pfp.png'
 }
 
 export const date: DateConfig = {

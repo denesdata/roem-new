@@ -8,9 +8,8 @@
   import Head from '$lib/components/head_static.svelte'
   import Header from '$lib/components/header.svelte'
   import Transition from '$lib/components/transition.svelte'
-  import Highlights from '$lib/components/highlights.svelte'
-  import Blog from '$lib/components/blog.svelte'
-  import Dashboard from '$lib/components/dashboard.svelte'
+  import Explore from '$lib/components/explore.svelte'
+  import Blog from '$lib/components/news.svelte'
   import 'uno.css'
   import '../app.pcss'
   import PostCard from '$lib/components/post_card.svelte'
@@ -33,6 +32,7 @@
         onRegisterError: error => console.error(error)
       })
   )
+  if (path[path.length - 1] == '/') path = path.slice(0, -1) //cut final slash
 </script>
 
 <Head />
@@ -40,12 +40,10 @@
 <Header {path} />
 
 <Transition {path}>
-  {#if path == '/blog'}
+  {#if path == '/news' || path == '/news/'}
     <Blog />
-  {:else if path == '/highlights'}
-    <Highlights />
-  {:else if path == '/dashboard'}
-    <Dashboard />
+  {:else if path == '/explore' || path == '/explore/'}
+    <Explore />
   {:else}
     <!-- {path.split('/')[1]} -->
     <slot />

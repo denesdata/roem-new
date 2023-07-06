@@ -2,48 +2,53 @@ import type { SiteConfig } from '$lib/types/site'
 
 export const site: SiteConfig = {
   protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://',
-  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'data.csaladen.es/',
-  title: 'Romanian Economic Monitor',
-  subtitle: 'Overview of the Romanian economy: facts and forecasts',
+  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'powerforplanet.com/',
+  title: 'Power for Planet title',
+  subtitle: 'Power for Planet subtitle',
   lang: 'en-US',
   description: 'Powered by SvelteKit/Urara',
   author: {
-    avatar: '/assets/logo/fsega_en.png',
-    name: 'Romanian Economic Monitor',
+    avatar: '/assets/pfp.png',
+    name: 'Power for Planet',
     status: '',
-    bio: 'Overview of the Romanian economy: facts and forecasts'
+    bio: 'Power for Planet'
   },
-  themeColor: '#3D4451',
+  themeColor: '#E7F5F5',
   category: {
-    "highlights": {
-      "name": "Highlights",
-      "description": "",
-      "img": "/assets/logo/blue-globe.png"
-    },
-    "blog": {
-      "name": "Blog",
-      "description": "",
+    "why": {
+      "name": "Why PFP",
+      "description": "Each section can have a custom logo and a short description",
       "img": "/assets/logo/y.png"
-    },
-    "modelling": {
-      "name": "Modelling & Analysis",
-      "description": "",
-      "img": "/assets/logo/r.png"
-    },
-    "explorables": {
-      "name": "Explorables",
-      "description": "This is a very long category description that spans over two lines",
-      "img": "/assets/logo/v.png"
-    },
-    "dashboard": {
-      "name": "Dashboard",
-      "description": "Existing dashboard",
-      "img": "/assets/logo/c.png"
     },
     "about": {
       "name": "About",
-      "description": "",
+      "description": "Each section can have a custom logo and a short description",
       "img": "/assets/logo/a.png"
+    },
+    "explore": {
+      "name": "Explore",
+      "description": "This is a very long category description that spans over two lines",
+      "img": "/assets/logo/v.png"
+    },
+    "green-energy": {
+      "name": "Green Energy",
+      "description": "Each section can have a custom logo and a short description",
+      "img": "/assets/logo/r.png"
+    },
+    "resources": {
+      "name": "Resources",
+      "description": "Each section can have a custom logo and a short description",
+      "img": "/assets/logo/blue-globe.png"
+    },
+    "news": {
+      "name": "News",
+      "description": "Each section can have a custom logo and a short description",
+      "img": "/assets/logo/y.png"
+    },
+    "contact": {
+      "name": "Contact",
+      "description": "Each section can have a custom logo and a short description",
+      "img": "/assets/logo/c.png"
     }
   }
 }

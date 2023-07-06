@@ -66,7 +66,7 @@
     </figure>
   {/if}
   <div
-    class={`card-body gap-0 ${
+    class={`card-body bg-white gap-0 ${
       preview && post.type === 'article' && post.image ? 'md:col-start-1 md:row-start-1 md:text-neutral-content md:z-20' : ''
     }`}>
     <div class="flex flex-col gap-2">
@@ -84,16 +84,16 @@
             {decoding} />
         </figure>
       {/if} -->
-      <Status {post} {preview} />
       {#if post.title}
         {#if preview}
+          <Status {post} {preview} />
           <h2
             itemprop="name headline"
             class="card-title text-3xl mr-auto bg-[length:100%_0%] bg-[position:0_88%] underline decoration-4 decoration-transparent group-hover:decoration-primary hover:bg-[length:100%_100%] hover:text-primary-content bg-gradient-to-t from-primary to-primary bg-no-repeat transition-all ease-in-out duration-300">
             <a itemprop="url" class="u-url p-name" href={post.path}>{post.title ?? post.path.slice(1)}</a>
           </h2>
         {:else}
-          <h1 itemprop="name headline" class="card-title text-3xl mb-8 p-name">{post.title ?? post.path.slice(1)}</h1>
+          <!-- <h1 itemprop="name headline" class="card-title text-3xl mb-8 p-name">{post.title ?? post.path.slice(1)}</h1> -->
         {/if}
       {/if}
       {#if post.summary}
@@ -109,7 +109,7 @@
         {@html post.html}
       {/if}
     </main>
-    {#if !preview && post.tags}
+    <!-- {#if !preview && post.tags}
       <div class="divider mt-4 mb-0" />
       <div>
         {#each post.tags as tag}
@@ -118,7 +118,7 @@
           </a>
         {/each}
       </div>
-    {/if}
+    {/if} -->
   </div>
   {#if !preview}
     {#if (prev || next) && !post.flags?.includes('pagination-disabled') && !post.flags?.includes('unlisted')}

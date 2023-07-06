@@ -12,10 +12,16 @@
   </figure>
   <div class="text-center flex flex-col gap-2">
     <h2 class="text-2xl font-bold mt-0 mb-2 p-name">Minidash</h2>
-    <p class="opacity-75 p-note">Minidash description: charts and stuff</p>
+    <p class="opacity-75 p-note">Minidash description: charts and buttons and stuff</p>
     <p class="opacity-75 p-note">
-      Last updated on:
-      <b>21 March 2023</b>
+      This is a placeholder, but we can have <code>action buttons</code>
+      or a
+      <code>did you know?</code>
+      perhaps?
+    </p>
+    <p class="opacity-75 p-note">
+      <br />
+      We can choose to hide this of course.
     </p>
   </div>
   <div class="grid grid-cols-2 mt-8 gap-2">
@@ -35,19 +41,6 @@
       <img
         class="u-photo rounded-full transition-shadow z-10 w-24 h-24 md:w-32 md:h-32"
         src="/assets/logo/orange-a.png"
-        alt="" />
-    </figure>
-
-    <figure class="relative mx-auto group">
-      <img
-        class="u-photo rounded-full transition-shadow z-10 w-24 h-24 md:w-32 md:h-32"
-        src="/assets/logo/purple-globe.png"
-        alt="" />
-    </figure>
-    <figure class="relative mx-auto group">
-      <img
-        class="u-photo rounded-full transition-shadow z-10 w-24 h-24 md:w-32 md:h-32"
-        src="/assets/logo/blue-globe.png"
         alt="" />
     </figure>
   </div>
